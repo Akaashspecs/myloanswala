@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { IoIosArrowForward } from "react-icons/io";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -48,64 +49,50 @@ const Testimonials = () => {
         <h3 className="text-2xl sm:text-3xl font-bold text-center mb-16 md:mb-8">
           MyLoanswala&apos;s Success Stories
         </h3>
-        <div className="flex top-12 right-0  w-full md:w-fit justify-center  md:top-0 md:right-5 absolute   px-2 gap-10">
-          <button
-            ref={prevRef}
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full h-[35px] w-[35px]  transition"
+        <div className="relative ">
+          <div className="flex text-white -top-10 pl-2 pr-1 text-[20px] justify-center items-center right-0 z-50 bg-black/50 h-[35px] rounded-full w-fit    absolute   ">
+            <div className="text-[16px]">Swipe </div>
+            <IoIosArrowForward />
+          </div>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            loop={true}
+            className="pb-10 flex"
           >
-            ‹
-          </button>
-          <button
-            ref={nextRef}
-            className="bg-green-500 hover:bg-green-600 text-white rounded-full h-[35px] w-[35px] transition"
-          >
-            ›
-          </button>
-        </div>
-
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          loop={true}
-          className="pb-10 flex"
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-        >
-          <div className="flex ">
-            {testimonials.map((t, i) => (
-              <SwiperSlide key={i} className="mb-3 w-full flex justify-center ">
-                <div className="bg-white rounded-xl  shadow-md hover:shadow-lg transition p-6 h-full flex flex-col justify-between">
-                  <p className="text-gray-700 italic mb-4 md:min-h-[92px] lg:min-h-[142px] 2xl:min-h-[92px]">
-                    “{t.message}”
-                  </p>
-                  <div className="border-t pt-3 mt-auto">
-                    <p className="font-semibold text-[#4eb543]">{t.name}</p>
-                    <p className="text-sm text-gray-500">{t.date}</p>
-                    <div className="flex mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-yellow-400">
-                          ★
-                        </span>
-                      ))}
+            <div className="flex ">
+              {testimonials.map((t, i) => (
+                <SwiperSlide
+                  key={i}
+                  className="mb-3 w-full flex justify-center "
+                >
+                  <div className="bg-white rounded-xl  shadow-md hover:shadow-lg transition p-6 h-full flex flex-col justify-between">
+                    <p className="text-gray-700 italic mb-4 md:min-h-[92px] lg:min-h-[142px] 2xl:min-h-[92px]">
+                      “{t.message}”
+                    </p>
+                    <div className="border-t pt-3 mt-auto">
+                      <p className="font-semibold text-[#4eb543]">{t.name}</p>
+                      <p className="text-sm text-gray-500">{t.date}</p>
+                      <div className="flex mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className="text-yellow-400">
+                            ★
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </div>
-        </Swiper>
+                </SwiperSlide>
+              ))}
+            </div>
+          </Swiper>
+        </div>
       </div>
     </section>
   );

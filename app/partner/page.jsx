@@ -336,7 +336,7 @@ function Partner() {
               <div className="text-white text-[24px] md:text-[30px] lg:hidden block">
                 Download MyLoanswala App
               </div>
-              <div className="mt-1 text-white text-[18px] md:text-[22px]">
+              <div className="mt-1 text-white text-[14px] md:text-[20px]">
                 Grow your business. Grow your career
               </div>
               <div className=" lg:block hidden mx-auto lg:mx-0 mt-10 px-6 w-fit text-black bg-white rounded-full py-3 md:py-3 text-base hover:scale-110 shadow-2xl transform duration-150">

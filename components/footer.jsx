@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="bg-[#0f1a2a] px-5 py-10 md:p-10  ">
         <div className="  max-w-[1600px] mx-auto mb-[50px] ">
           <div className="text-white/75 text-[13px] justify-center  grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-5 hidden sm:grid">
-            <div className="max-w-[320px]">
-              <div>About Us</div>
-              <div>
+            <div className="max-w-[320px]  lg:mx-auto">
+              <div className="text-[14.5px] text-white ">About Us</div>
+              <div className="mt-2">
                 MyLoanswala was established in 2023 with a mission to promote
                 rural development, financial inclusion, and women empowerment
                 across India. the organization is committed to supporting
@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="pl-6 md:pl-6">
+            <div className="pl-6 md:pl-6 lg:mx-auto">
               <div className="text-[14.5px] text-white ">Useful Links</div>
               <div className="flex flex-col gap-1 ">
                 <Link href={"/"} className="mt-2 w-fit">
@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
             </div> */}
 
-            <div className=" md:pl-0">
+            <div className="lg:mx-auto md:pl-0">
               <div>
                 <div>Contact Us</div>
                 Email: contact@myloanswala.com
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
             </div>
             <div className=" w-full">
-              <div>About Us</div>
+              <div className="text-[14.5px] text-white ">About Us</div>
               <div className="w-full">
                 MyLoanswala was established in 2023 with a mission to promote
                 rural development, financial inclusion, and women empowerment

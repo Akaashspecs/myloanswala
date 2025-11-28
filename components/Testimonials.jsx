@@ -1,10 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import { IoIosArrowForward } from "react-icons/io";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Testimonials = () => {
@@ -50,14 +49,14 @@ const Testimonials = () => {
           MyLoanswala&apos;s Success Stories
         </h3>
         <div className="relative ">
-          <div className="flex text-white -top-10 pl-2 pr-1 text-[20px] justify-center items-center right-0 z-50 bg-black/50 h-[35px] rounded-full w-fit    absolute   ">
-            <div className="text-[16px]">Swipe </div>
-            <IoIosArrowForward />
-          </div>
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
+            autoplay={{
+              delay: 2500, // 3 seconds
+              disableOnInteraction: false, // keeps autoplay after user swipes
+            }}
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },

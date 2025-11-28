@@ -47,7 +47,7 @@ const Footer = () => {
 
             <div className="lg:mx-auto md:pl-0">
               <div>
-                <div>Contact Us</div>
+                <div className="text-[14.5px] text-white">Contact Us</div>
                 Email: contact@myloanswala.com
                 <br /> Contact: +919210247437
                 {/* <IoLogoWhatsapp
@@ -56,7 +56,7 @@ const Footer = () => {
                 /> */}
               </div>
             </div>
-            <div className=" pl-6 md:pl-6 lg:hidden block">
+            <div className="text-[14.5px] text-white pl-6 md:pl-6 lg:hidden block">
               <div className=" ">Download Our Trisaran App:</div>
               <div className="bg-blue-500 w-fit px-2 py-1 rounded-sm mt-1">
                 Download App
@@ -81,9 +81,11 @@ const Footer = () => {
                   <Link href={"/partner"}>Become a Partner </Link>
                 </div>
               </div>
-              <div className="grow flex-1 flex justify-end">
+              <div className="grow flex-1 flex justify-end ">
                 <div>
-                  <div>Download Our MyLoanswala App:</div>
+                  <div className="text-[14.5px] text-white">
+                    Download Our MyLoanswala App:
+                  </div>
                   <div className="bg-blue-500 w-fit px-2 py-1 rounded-sm mt-1">
                     Download App
                   </div>
@@ -100,7 +102,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <div className="mt-2">Contact Us</div>
+              <div className="mt-2 text-[14.5px] text-white">Contact Us</div>
               Email: contact@myloanswala.com
               <br /> Contact: +917347703895
             </div>

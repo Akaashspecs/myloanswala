@@ -8,7 +8,7 @@ const Register = () => {
           <div className="text-white text-[24px] md:text-[30px]">
             Contact us to become a MyLoanswala Partner
           </div>
-          <div className="mt-1 text-white text-[14px] md:text-[20px]">
+          <div className="mt-1 text-white/75 text-[14px] md:text-[20px]">
             Fulfill your needs. Secure your future
           </div>
           <div className="mx-auto  lg:mx-0 mt-10 py-1 md:py-2  w-fit text-white bg-green-600 rounded-full text-base hover:scale-110 shadow-2xl transform duration-150">
